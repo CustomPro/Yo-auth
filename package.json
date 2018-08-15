@@ -1,0 +1,71 @@
+{
+  "name": "yoxxy-authorization-server",
+  "version": "0.0.1",
+  "author": "Herman Del Campo",
+  "description": "OAuth2 security server",
+  "main": "app.js",
+  "repository": {
+    "type": "git"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "config": "^1.27.0",
+    "connect-ensure-login": "^0.1.1",
+    "connect-redis": "^3.3.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-ejs-layouts": "^2.3.1",
+    "express-session": "^1.15.6",
+    "feathers-errors": "^2.9.2",
+    "i18n-2": "^0.7.2",
+    "joi": "^13.0.2",
+    "jsonwebtoken": "^7.4.3",
+    "mongoose": "^4.13.0",
+    "ngrok": "^2.2.24",
+    "oauth2orize": "^1.10.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth2": "^0.1.6",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-linkedin-oauth2": "^1.5.0",
+    "passport-local": "^1.0.0",
+    "passport-oauth2-client-password": "^0.1.2",
+    "passport-twitter": "^1.0.4",
+    "uuid": "^3.1.0",
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^1.7.2"
+  },
+  "scripts": {
+    "lint": "eslint *.js config db test",
+    "start": "node app.js",
+    "test": "mocha test test/db test/config",
+    "test:watch": "npm run test -- --watch",
+    "test:integration": "mocha test/integration"
+  },
+  "engines": {
+    "node": ">=6.7.0",
+    "npm": ">=3.10.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "es6-promisify": "^5.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.10.3",
+    "mocha": "^3.5.3",
+    "request": "^2.83.0",
+    "sinon": "^1.17.7",
+    "sinon-chai": "^2.14.0"
+  },
+  "keywords": [
+    "authentication",
+    "oauth2",
+    "security",
+    "passport"
+  ]
+}

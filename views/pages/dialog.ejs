@@ -1,0 +1,42 @@
+<!-- Style sheets -->
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/dialog-box.css">
+
+
+<div class="container">
+    <div class="dialog-box col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <%= __('AuthorizationServerDecision') %>
+                </div>
+
+            </div>
+
+            <div class="panel-body">
+
+                <% if (locals.error) { %>
+                <div class="alert alert-danger col-sm-12"> <%= locals.error %></div>
+                <% } %>
+
+                <form action="/dialog/authorize/decision" method="post">
+                    <input name="transaction_id" type="hidden" value="<%= transactionID %>">
+
+
+                    <p><%= user.name %>,</p>
+                    <p><%= __('TheApplication)  %>
+                        <b><%=  client.name  %></b> <%= __('IsRequestingAccessToAccount') %></p>
+
+                    <p><%= __('DoYouApprove') %></p>
+                    <br>
+                    <div class="text-center">
+                        <input class="btn btn-error" type="submit" value="<%= __('Deny') %>" name="cancel" id="deny">
+                        <input class="btn btn-primary" type="submit" value="<%= __('Accept') %>" id="allow">
+                    </div>
+                </form>
+
+            </div>
+            <div class="bottom-line">
+
+            </div>
+        </div>
+    </div>

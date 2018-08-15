@@ -1,0 +1,34 @@
+04:34:07 - debug: Logger initialized
+04:34:08 - debug: Required
+04:34:08 - info: OAuth 2.0 Authorization Server started on port 3000
+04:34:08 - debug: Mongo connected
+04:34:08 - debug: Seeding clients
+04:34:09 - debug: Seeding users
+04:34:09 - debug: Clean up access tokens
+04:34:09 - debug: Clean up auth codes
+04:34:09 - debug: Clean up refresh tokens
+04:34:11 - debug: Clients seed completed
+04:34:12 - debug: Users seed completed
+08:49:55 - debug: Logger initialized
+08:49:55 - debug: Required
+08:50:00 - info: OAuth 2.0 Authorization Server started on port 3000
+08:50:00 - debug: Mongo connected
+15:32:18 - debug: Logger initialized
+15:32:18 - debug: Required
+15:32:23 - info: OAuth 2.0 Authorization Server started on port 3000
+15:32:23 - debug: Mongo connected
+15:34:18 - debug: Logger initialized
+15:34:18 - debug: Required
+15:34:19 - info: OAuth 2.0 Authorization Server started on port 3000
+15:34:19 - debug: Mongo connected
+15:36:12 - debug: Logger initialized
+15:36:12 - debug: Required
+15:36:13 - info: OAuth 2.0 Authorization Server started on port 3000
+15:36:13 - debug: Mongo connected
+15:36:13 - debug: Seeding clients
+15:36:13 - debug: Seeding users
+15:36:13 - debug: Clean up access tokens
+15:36:13 - debug: Clean up auth codes
+15:36:13 - debug: Clean up refresh tokens
+15:36:13 - debug: Users seed completed
+15:36:13 - debug: Clients seed completed

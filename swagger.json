@@ -1,0 +1,110 @@
+{
+  "swagger": "3.2",
+  "info": {
+    "title": "Multi-cast Media authorization server beta API",
+    "version": "beta",
+    "description": "Beta API"
+  },
+  "host": "beta-auth.multicast-media.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "tags": [
+    {
+      "name": "authorization",
+      "description": "OAuth2 authorization service"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/oauth/token": {
+      "post": {
+        "parameters": [{
+          "in": "header",
+          "name": "Authorization",
+          "required": true,
+          "type": "string",
+          "description": "Basic client credentials, for beta could be used \"Basic YWJjMTIzOnNzaC1zZWNyZXQ=\""
+        }, {
+          "in": "body",
+          "name": "request",
+          "required": false,
+          "schema": {
+            "type": "object",
+            "$ref": "#/definitions/OAuthRequest"
+          },
+          "description": "Token request with account credentials"
+        }],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/TokenResponse"
+            }
+          },
+          "401": {
+            "description": "not authenticated"
+          },
+          "500": {
+            "description": "general error"
+          }
+        },
+        "description": "Token authentication endpoint",
+        "summary": "",
+        "tags": [
+          "authorization"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "TokenResponse": {
+      "type": "object",
+      "properties": {
+        "accessToken": {
+          "type": "string",
+          "description": "Access token"
+        },
+        "refreshToken": {
+          "type": "string",
+          "description": "Refresh token"
+        },
+        "expiresIn": {
+        }
+      }
+    },
+    "OAuthRequest": {
+      "type": "object",
+      "properties": {
+        "Scope": {
+          "type": "string",
+          "description": "OAuth2 scope, for example 'offline_access'"
+        },
+        "Grant_type": {
+          "type": "string",
+          "description": "OAuth2 grant type, for example 'password'"
+        },
+        "UserName": {
+          "type": "string",
+          "description": "Account username"
+        },
+        "Password": {
+          "type": "string",
+          "description": "Account password"
+        }
+      }
+    }
+  }
+}

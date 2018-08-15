@@ -1,0 +1,145 @@
+<link rel="stylesheet" type="text/css" href="/public/stylesheets/dialog-box.css">
+<link rel="stylesheet" type="text/css" href="/public/libs/css/bootstrap-social.css">
+<script type="text/javascript" src="/public/libs/js/validate.min.js"></script>
+
+<div class="container">
+    <div class="dialog-box col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <%= __('AuthorizeIntoApplication') %>
+                </div>
+
+            </div>
+
+            <div class="panel-body">
+
+                <h4 class="text-center"><%= __('SignUp') %></h4>
+                <hr/>
+
+                <form id="signinform" class="form-horizontal" role="form" action="/signup" method="post"
+                      data-toggle="validator">
+
+                    <% if (locals.error) { %>
+                    <div class="form-group form-alert">
+                        <div class="alert alert-danger">
+                            <%= locals.error %>
+                        </div>
+                    </div>
+                    <% } %>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="firstName" class="control-label"><%= __('FirstName') %></label>
+                                <input type="text" name="firstName" maxlength="15" class="form-control"
+                                       id="firstName"
+                                       placeholder="<%= __('FirstName') %>" pattern="^[_A-z]{1,}$" required>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="lastName" class="control-label"><%= __('LastName') %></label>
+                                <input type="text" name="lastName" maxlength="16" class="form-control"
+                                       id="lastName"
+                                       placeholder="<%= __('LastName') %>" pattern="^[_A-z]{1,}$" required>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group has-feedback">
+                        <label for="name" class="control-label"><%= __('LogIn') %></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="50" class="form-control"
+                                   id="name" placeholder="<%= __('EnterUsername') %>" name="name" required>
+                        </div>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+
+                    <div class="form-group has-feedback">
+                        <label for="email" class="control-label">E-mail</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="<%= __('Enter') %> e-mail" name="email"
+                                   required maxlength="100">
+                        </div>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback">
+                                <label for="password" class="control-label"><%= __('Password') %></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"> <i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                                    <input type="password" name="password" data-minlength="6"
+                                           class="form-control" id="password"
+                                           placeholder="<%= __('Password') %>" required>
+                                </div>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block"><%= __('MinimumOfSixCharacters') %></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="passwordConfirm" class="control-label"><%= __('ConfirmPassword') %></label>
+                                <input type="password" name="passwordConfirm" class="form-control" id="passwordConfirm"
+                                       data-match="#password" data-match-error="<%= __('PasswordsDontMatch') %>"
+                                       placeholder="<%= __('ConfirmPassword') %>" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group action-group">
+                        <div class="col-sm-12">
+                            <span class="pull-left signup-question">
+                               <%= __('AlreadyHaveAnAccount') %>
+                                <a href="/login">
+                                 <%= __('LogInHere') %>
+                                </a>
+                            </span>
+                            <button type="submit" value="Submit" class="btn btn-primary pull-right">
+                                <%= __('SignUp') %>&nbsp;
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <hr/>
+
+                <div class="text-center social-buttons">
+                    <a href="/oauth/twitter" class="btn btn-social-icon btn-twitter">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                    <a href="/oauth/facebook" class="btn btn-social-icon btn-facebook">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                    <a href="/oauth/linkedin" class="btn btn-social-icon btn-linkedin">
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                    <a href="/oauth/google" class="btn btn-social-icon btn-google">
+                        <span class="fa fa-google"></span>
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="bottom-line">
+
+            </div>
+        </div>
+    </div>
+
+</div>

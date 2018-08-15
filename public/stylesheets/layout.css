@@ -1,0 +1,66 @@
+html {
+    height: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: helvetica, arial, verdana, sans-serif;
+}
+
+body {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 300;
+    font-family: helvetica, arial, verdana, sans-serif;
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+}
+
+/* buttons */
+
+.btn {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid;
+    font: 300 12px/16px helvetica, arial, verdana, sans-serif;
+    color: #fff;
+    max-width: 100%;
+}
+
+.btn-primary {
+    background-color: #3fc3de !important;
+    border: none !important;
+}
+
+/* panels */
+
+.panel {
+    box-shadow: rgba(36, 72, 129, 0.3) 0px 7px 30px;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+
+    border: 0px solid transparent;
+    border-radius: 4px;
+}
+
+.panel .panel-title {
+    font-family: Lato, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgb(147, 152, 187);
+}
+
+.panel .bottom-line {
+    background-size: cover;
+    border-radius: 4px;
+    width: inherit;
+    height: 50px;
+    background-image: url(/public/images/account/window-footer.jpg);
+}
+
+.panel-info .panel-heading {
+    padding: 4px 9px;
+    background-color: #eff9ff;
+    border-width: 0;
+}
